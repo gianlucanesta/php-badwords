@@ -17,14 +17,14 @@ con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
 
 <?php 
     $text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Impedit dolorum, quis quam, voluptatum accusamus beatae similique 
-                est odio cumque sapiente fuga, porro quae sed modi ipsa recusandae 
-                obcaecati sit ipsam!';
+        Impedit dolorum, quis quam, voluptatum accusamus beatae similique 
+        est odio cumque sapiente fuga, porro quae sed modi ipsa recusandae 
+        obcaecati sit ipsam!';
 ?>
 
 <div >
     <h1>
-        Testo iniziale (lunghezza: <?php echo strlen($text); ?> caratteri)
+        Testo iniziale (lunghezza: <?php echo strlen($text); ?> caratteri                                                               )
     </h1>
 
     <p>
@@ -32,10 +32,16 @@ con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
     </p> 
 </div>
 
+<?php 
+    $badWord =  $_GET['word'];
+?>
+<p>
+    La parola da censurare è: <?php echo $badWord ?>
+</p> 
 
 
 <?php 
-    $replaced_text = str_replace("voluptatum", "***", $text)
+    $replaced_text = str_replace("$badWord", "***", $text)
 ?>
 
 
